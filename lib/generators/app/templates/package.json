@@ -4,7 +4,7 @@
     "start": "umi dev",
     "build": "umi build",
     "test": "umi test",
-    "lint": "eslint --ext .js src mock tests"
+    "lint": "eslint --ext .js src mock"
   },
   "dependencies": {
     <% if (reactFeatures.includes('dva')) { %>
@@ -60,8 +60,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "git pull --rebase"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
